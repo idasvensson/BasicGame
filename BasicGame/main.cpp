@@ -5,14 +5,41 @@
 //  Created by Ida Svensson on 2013-12-05.
 //  Copyright (c) 2013 Ida Svensson. All rights reserved.
 //
+// Möjligt för tillämpare att lägga till bind-funktioner för knapptryck, t.ex.
+// LazyFoo: Timing, Collision Detection, Animation
+//
+// Ändringar:
+// - Skapade en default tillämpning av .tick hos Sprite, som inluppen krävde.
+// - Skapade Image-klassen efter beskrivningen av inluppen
+//
 
+#include "SDL/SDL.h"
+#include "GameEngine.h"
+#include "Globals.h"
+#include "PlayerSprite.h"
+#include "BlockSprite.h"
 #include <iostream>
+using namespace std;
+using namespace basicgame;
 
-int main(int argc, const char * argv[])
-{
-
-    // insert code here...
-    std::cout << "Hello, World!\n";
-    return 0;
+void quit(string dummy){
+    exit(0);
 }
 
+int main(int argc, char**argv)
+{
+    sys.init();
+    
+    // Frame fram;
+    GameEngine engineObject(30);
+    
+    PlayerSprite* p = PlayerSprite::getInstance(300, 200);
+    BlockSprite* b = BlockSprite::getInstance(400, 160);
+    
+    engineObject.add(p);
+    engineObject.add(b);
+    
+    engineObject.run();
+    
+    return 0;
+}

@@ -7,8 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0CC13F1F185F42B900E49E35 /* GameEngine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0CC13F1D185F42B900E49E35 /* GameEngine.cpp */; };
+		0CC13F22185F4C4500E49E35 /* BlockSprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0CC13F20185F4C4500E49E35 /* BlockSprite.cpp */; };
+		0CC13F5F1862353400E49E35 /* Image.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0CC13F5D1862353300E49E35 /* Image.cpp */; };
 		0CD85CAA18511DA20090A668 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0CD85CA918511DA20090A668 /* main.cpp */; };
 		0CD85CAC18511DA20090A668 /* BasicGame.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0CD85CAB18511DA20090A668 /* BasicGame.1 */; };
+		0CD85CB418511DE70090A668 /* SDLMain.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CD85CB318511DE70090A668 /* SDLMain.m */; };
+		0CD85CB618511E0F0090A668 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CD85CB518511E0F0090A668 /* Cocoa.framework */; };
+		0CD85CB818511E170090A668 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CD85CB718511E170090A668 /* Foundation.framework */; };
+		0CD85CBA18511E2F0090A668 /* SDL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CD85CB918511E2F0090A668 /* SDL.framework */; };
+		0CD85CBC18511E3F0090A668 /* SDL_image.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CD85CBB18511E3F0090A668 /* SDL_image.framework */; };
+		0CD85CBF18511F990090A668 /* Globals.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0CD85CBD18511F990090A668 /* Globals.cpp */; };
+		0CD85CC2185121EC0090A668 /* Sprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0CD85CC0185121EC0090A668 /* Sprite.cpp */; };
+		0CD85CC5185123750090A668 /* PlayerSprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0CD85CC3185123750090A668 /* PlayerSprite.cpp */; };
+		0CD85CC81851322F0090A668 /* Frame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0CD85CC61851322F0090A668 /* Frame.cpp */; };
+		0CD85CCB185138C60090A668 /* Rectangle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0CD85CC9185138C60090A668 /* Rectangle.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,9 +38,31 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0CC13F1D185F42B900E49E35 /* GameEngine.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameEngine.cpp; sourceTree = "<group>"; };
+		0CC13F1E185F42B900E49E35 /* GameEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameEngine.h; sourceTree = "<group>"; };
+		0CC13F20185F4C4500E49E35 /* BlockSprite.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BlockSprite.cpp; sourceTree = "<group>"; };
+		0CC13F21185F4C4500E49E35 /* BlockSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlockSprite.h; sourceTree = "<group>"; };
+		0CC13F5D1862353300E49E35 /* Image.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Image.cpp; sourceTree = "<group>"; };
+		0CC13F5E1862353400E49E35 /* Image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Image.h; sourceTree = "<group>"; };
 		0CD85CA618511DA20090A668 /* BasicGame */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = BasicGame; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CD85CA918511DA20090A668 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		0CD85CAB18511DA20090A668 /* BasicGame.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = BasicGame.1; sourceTree = "<group>"; };
+		0CD85CB218511DE70090A668 /* SDLMain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SDLMain.h; path = BasicGame/SDLMain.h; sourceTree = "<group>"; };
+		0CD85CB318511DE70090A668 /* SDLMain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SDLMain.m; path = BasicGame/SDLMain.m; sourceTree = "<group>"; };
+		0CD85CB518511E0F0090A668 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		0CD85CB718511E170090A668 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		0CD85CB918511E2F0090A668 /* SDL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL.framework; path = ../../../../../../Library/Frameworks/SDL.framework; sourceTree = "<group>"; };
+		0CD85CBB18511E3F0090A668 /* SDL_image.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL_image.framework; path = ../../../../../../Library/Frameworks/SDL_image.framework; sourceTree = "<group>"; };
+		0CD85CBD18511F990090A668 /* Globals.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Globals.cpp; sourceTree = "<group>"; };
+		0CD85CBE18511F990090A668 /* Globals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Globals.h; sourceTree = "<group>"; };
+		0CD85CC0185121EC0090A668 /* Sprite.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Sprite.cpp; sourceTree = "<group>"; };
+		0CD85CC1185121EC0090A668 /* Sprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sprite.h; sourceTree = "<group>"; };
+		0CD85CC3185123750090A668 /* PlayerSprite.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PlayerSprite.cpp; sourceTree = "<group>"; };
+		0CD85CC4185123750090A668 /* PlayerSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerSprite.h; sourceTree = "<group>"; };
+		0CD85CC61851322F0090A668 /* Frame.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Frame.cpp; sourceTree = "<group>"; };
+		0CD85CC71851322F0090A668 /* Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Frame.h; sourceTree = "<group>"; };
+		0CD85CC9185138C60090A668 /* Rectangle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Rectangle.cpp; sourceTree = "<group>"; };
+		0CD85CCA185138C60090A668 /* Rectangle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Rectangle.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +70,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0CD85CBC18511E3F0090A668 /* SDL_image.framework in Frameworks */,
+				0CD85CBA18511E2F0090A668 /* SDL.framework in Frameworks */,
+				0CD85CB818511E170090A668 /* Foundation.framework in Frameworks */,
+				0CD85CB618511E0F0090A668 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +83,12 @@
 		0CD85C9D18511DA20090A668 = {
 			isa = PBXGroup;
 			children = (
+				0CD85CBB18511E3F0090A668 /* SDL_image.framework */,
+				0CD85CB918511E2F0090A668 /* SDL.framework */,
+				0CD85CB718511E170090A668 /* Foundation.framework */,
+				0CD85CB518511E0F0090A668 /* Cocoa.framework */,
+				0CD85CB218511DE70090A668 /* SDLMain.h */,
+				0CD85CB318511DE70090A668 /* SDLMain.m */,
 				0CD85CA818511DA20090A668 /* BasicGame */,
 				0CD85CA718511DA20090A668 /* Products */,
 			);
@@ -61,6 +106,22 @@
 			isa = PBXGroup;
 			children = (
 				0CD85CA918511DA20090A668 /* main.cpp */,
+				0CC13F5D1862353300E49E35 /* Image.cpp */,
+				0CC13F5E1862353400E49E35 /* Image.h */,
+				0CD85CC0185121EC0090A668 /* Sprite.cpp */,
+				0CD85CC1185121EC0090A668 /* Sprite.h */,
+				0CD85CC9185138C60090A668 /* Rectangle.cpp */,
+				0CD85CCA185138C60090A668 /* Rectangle.h */,
+				0CD85CC3185123750090A668 /* PlayerSprite.cpp */,
+				0CD85CC4185123750090A668 /* PlayerSprite.h */,
+				0CC13F20185F4C4500E49E35 /* BlockSprite.cpp */,
+				0CC13F21185F4C4500E49E35 /* BlockSprite.h */,
+				0CD85CC61851322F0090A668 /* Frame.cpp */,
+				0CD85CC71851322F0090A668 /* Frame.h */,
+				0CC13F1D185F42B900E49E35 /* GameEngine.cpp */,
+				0CC13F1E185F42B900E49E35 /* GameEngine.h */,
+				0CD85CBD18511F990090A668 /* Globals.cpp */,
+				0CD85CBE18511F990090A668 /* Globals.h */,
 				0CD85CAB18511DA20090A668 /* BasicGame.1 */,
 			);
 			path = BasicGame;
@@ -117,7 +178,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0CD85CBF18511F990090A668 /* Globals.cpp in Sources */,
+				0CD85CB418511DE70090A668 /* SDLMain.m in Sources */,
+				0CC13F22185F4C4500E49E35 /* BlockSprite.cpp in Sources */,
+				0CD85CC2185121EC0090A668 /* Sprite.cpp in Sources */,
+				0CD85CC81851322F0090A668 /* Frame.cpp in Sources */,
 				0CD85CAA18511DA20090A668 /* main.cpp in Sources */,
+				0CD85CCB185138C60090A668 /* Rectangle.cpp in Sources */,
+				0CD85CC5185123750090A668 /* PlayerSprite.cpp in Sources */,
+				0CC13F1F185F42B900E49E35 /* GameEngine.cpp in Sources */,
+				0CC13F5F1862353400E49E35 /* Image.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,6 +265,11 @@
 		0CD85CB018511DA20090A668 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -202,6 +277,11 @@
 		0CD85CB118511DA20090A668 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -225,6 +305,7 @@
 				0CD85CB118511DA20090A668 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
