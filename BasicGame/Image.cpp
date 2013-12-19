@@ -9,6 +9,7 @@
 #include "Image.h"
 #include "SDL_image/SDL_image.h"
 #include <string>
+#include <iostream>
 
 namespace basicgame {
     
@@ -24,7 +25,8 @@ namespace basicgame {
         // Om bilden laddades
         if( loadedImage != NULL )
         {
-            // Konvertera bilden till skärmens format (?)
+            // Konvertera bilden till skärmens format
+            // NOTE: SDL_ConvertSurface används internt inom SDL_DisplayFormat
             optimizedImage = SDL_DisplayFormat( loadedImage );
             
             // Frigör den gamla ytan
@@ -55,7 +57,7 @@ namespace basicgame {
     {
         img = other.img; // Tilldela den nya kopians img värdet av originalets img
         isTransparent = other.isTransparent;
-        img->refcount++; // ?
+        img->refcount++;
     }
     
     Image& Image::operator=(const Image& other)
@@ -89,6 +91,7 @@ namespace basicgame {
         while(img->refcount > 0)
         {
             SDL_FreeSurface( img );
+            std::cout << "Deleted img with refcount: " << img->refcount;
         }
     }
     

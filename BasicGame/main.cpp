@@ -18,6 +18,7 @@
 #include "Globals.h"
 #include "PlayerSprite.h"
 #include "BlockSprite.h"
+#include "Image.h"
 #include <iostream>
 using namespace std;
 using namespace basicgame;
@@ -38,6 +39,12 @@ int main(int argc, char**argv)
     
     engineObject.add(p);
     engineObject.add(b);
+    
+    // Test av Image med kopiering, tilldelning och refcount
+    Image A( "/Users/idasvensson/Desktop/images/boll.bmp", false );
+    Image B( "/Users/idasvensson/Desktop/images/boll.bmp", false );
+    Image C(A);
+    Image D = A;
     
     engineObject.run();
     
