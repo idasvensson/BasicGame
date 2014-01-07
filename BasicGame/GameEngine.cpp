@@ -6,10 +6,12 @@
 //  Copyright (c) 2013 Ida Svensson. All rights reserved.
 //
 
+#include "stdafx.h"
 #include "GameEngine.h"
 #include "SDL/SDL.h"
 #include "Globals.h"
 #include <vector>
+#include <iostream>
 
 namespace basicgame {
     
@@ -29,13 +31,16 @@ namespace basicgame {
             sprites[i]->draw();
         SDL_Flip(sys.screen);
         
-        SDL_EnableKeyRepeat(1, SDL_DEFAULT_REPEAT_INTERVAL);
+        // SDL_EnableKeyRepeat(1, SDL_DEFAULT_REPEAT_INTERVAL);
         
         // Händelseloop
         bool quit = false;
+        SDL_Event event;
         while(!quit) {
             
-            SDL_Event event;
+            // Starta timern
+			timer.start();
+            
             while (SDL_PollEvent(&event)) {
                 
                 switch (event.type) {
@@ -48,6 +53,12 @@ namespace basicgame {
                         for(int i=0; i<sprites.size();i++)
                             sprites[i]->keyDown(event.key.keysym.sym);
                         break;
+                        
+                    case SDL_KEYUP:
+                        
+						for (int i = 0; i<sprites.size(); i++)
+							sprites[i]->keyUp(event.key.keysym.sym);
+						break;
                         
                 } // switch
                 
@@ -64,6 +75,15 @@ namespace basicgame {
             }
                 
             SDL_Flip(sys.screen);
+            
+            frameCounter++;
+            
+			// Om vår timer har gått mindre än tiden det ska ta för varje frame
+			if ((timer.getTicks() < 1000 / MAX_FRAME_RATE))
+			{
+				// Då väntar vi den tiden som återstår
+				SDL_Delay((1000 / MAX_FRAME_RATE) - timer.getTicks());
+			}
             
         } // while running
     }

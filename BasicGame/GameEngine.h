@@ -11,6 +11,7 @@
 
 #include "Sprite.h"
 #include <vector>
+#include "Timer.h"
 
 namespace basicgame {
     
@@ -21,11 +22,16 @@ namespace basicgame {
         void add(Sprite* ny);
         void run();
         bool bindKey(int sdlKeyValue, FuncPointer fp);
+        void apply_surface(int x, int y, SDL_Surface* source, SDL_Surface* destination);
         
         //konstruktorer
         ~GameEngine();
         GameEngine(const unsigned short int MAX_FRAME_RATE);
     private:
+        // Medlemmar fˆr timing och frame rate-regulering
+		Timer timer;
+		int frameCounter = 0;
+        
         std::vector<Sprite*> sprites; // En vector av Sprite-objekt-pekare
         void forAll( void(Sprite::*mpek)(int, int), int x, int y);
         const unsigned short int MAX_FRAME_RATE;
