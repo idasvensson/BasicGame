@@ -91,6 +91,7 @@ namespace basicgame {
         while(img->refcount > 0)
         {
             SDL_FreeSurface( img );
+            // Test av refcount
             std::cout << "Deleted img with refcount: " << img->refcount;
         }
     }
