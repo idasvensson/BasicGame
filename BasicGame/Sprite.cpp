@@ -11,7 +11,7 @@ using namespace std;
 
 namespace basicgame {
     
-    Sprite::Sprite(int x, int y, int xVel, int yVel, string filename, bool transparent) : image(filename, transparent)
+    Sprite::Sprite(int x, int y, string filename, bool transparent) : image(filename, transparent)
     {
         
     }

@@ -25,13 +25,14 @@ namespace basicgame {
         virtual ~Sprite();
         virtual void keyDown(int key);
         virtual void keyUp(int key);
+        
         // virutal int getSpeed();
         // virtual int getPosition();
         // virtual void setSpeed(int xVel, int yVel);
         // virtual void setPosition(int x, int y);
         virtual void setImage(std::string filename, bool transparent);
     protected:
-        Sprite(int x, int y, int xVel, int yVel, std::string filename, bool transparent);
+        Sprite(int x, int y, std::string filename, bool transparent);
         Rectangle rect;
         Image image;
         void setXVel(int newVel);

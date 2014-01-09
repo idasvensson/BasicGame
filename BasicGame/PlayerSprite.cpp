@@ -16,22 +16,11 @@ using namespace std;
 namespace basicgame{
 
     PlayerSprite::PlayerSprite(int x, int y, int xVel, int yVel, string filename, bool transparent) :
-    Sprite(x, y, xVel, yVel, filename, transparent)
+    MovingSprite(x, y, xVel, yVel, filename, transparent)
     {
         // Initialize offsets
         rect.x = x;
         rect.y = y;
-        
-        // Load image - use Image class later...
-        //img = SDL_LoadBMP("/Users/idasvensson/Desktop/images/boll.bmp");
-        //img("/Users/idasvensson/Desktop/images/boll.bmp", true);
-        
-        /*
-        // Addera transparens till bildens vita pixlar
-        Uint32 white = SDL_MapRGB(img->format, 255, 255, 255);
-        Uint32 pixel = pixel = *((Uint32*)img->pixels);
-        SDL_SetColorKey(img, SDL_SRCCOLORKEY|SDL_RLEACCEL, white);
-         */
     }
     
     PlayerSprite* PlayerSprite::getInstance(int x, int y, int xVel, int yVel, string filename, bool transparent)

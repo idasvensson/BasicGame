@@ -15,23 +15,23 @@ using namespace std;
 
 namespace basicgame{
     
-    BlockSprite::BlockSprite(int x, int y, int xVel, int yVel, string filename, bool transparent) :
-    Sprite(x, y, 0, 0, filename, transparent)
+    BlockSprite::BlockSprite(int x, int y, string filename, bool transparent) :
+    Sprite(x, y, filename, transparent)
     {
         rect.x = x;
         rect.y = y;
         // img = SDL_LoadBMP("/Users/idasvensson/Desktop/images/boll.bmp");
     }
     
-    BlockSprite* BlockSprite::getInstance(int x, int y, int xVel, int yVel, string filename, bool transparent)
+    BlockSprite* BlockSprite::getInstance(int x, int y, string filename, bool transparent)
     {
-        return new BlockSprite(x, y, xVel, yVel, filename, transparent);
+        return new BlockSprite(x, y, filename, transparent);
     }
     
     void BlockSprite::draw()
     {
         // Rita ut bilden på skärmytan
-        // SDL_BlitSurface(img, NULL, sys.screen, &rect);
+        SDL_BlitSurface(image.getSurface(), NULL, sys.screen, &rect);
     }
     
     void BlockSprite::animationStart()

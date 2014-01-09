@@ -10,13 +10,13 @@
 #define __BasicGame__PlayerSprite__
 
 #include "SDL/SDL.h"
-#include "Sprite.h"
+#include "MovingSprite.h"
 #include <vector>
 #include <string>
 
 namespace basicgame {
 
-    class PlayerSprite : public Sprite {
+    class PlayerSprite : public MovingSprite {
     
     public:
         static PlayerSprite* getInstance(int x, int y, int xVel, int yVel, std::string filename, bool transparent = true);

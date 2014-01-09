@@ -35,7 +35,7 @@ int main(int argc, char**argv)
     GameEngine engineObject(30);
     
     PlayerSprite* p = PlayerSprite::getInstance(300, 200, 1, 1, "/Users/idasvensson/Desktop/images/boll.bmp");
-    BlockSprite* b = BlockSprite::getInstance(400, 100, 0, 0, "/Users/idasvensson/Desktop/images/arr-right.bmp");
+    BlockSprite* b = BlockSprite::getInstance(400, 100, "/Users/idasvensson/Desktop/images/arr-right.bmp");
     
     engineObject.add(p);
     engineObject.add(b);
