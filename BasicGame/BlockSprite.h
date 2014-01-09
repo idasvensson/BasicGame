@@ -18,7 +18,7 @@ namespace basicgame {
     class BlockSprite : public Sprite {
         
     public:
-        static BlockSprite* getInstance(int x, int y);
+        static BlockSprite* getInstance(int x, int y, int xVel, int yVel, std::string filename, bool transparent = true);
         void draw();
         void animationStart();
         void animationStop();
@@ -26,7 +26,7 @@ namespace basicgame {
         ~BlockSprite();
         int x, y;
     protected:
-        BlockSprite(int x, int y);
+        BlockSprite(int x, int y, int xVel, int yVel, std::string filename, bool transparent);
     private:
         SDL_Surface* img;
         // bool isMoving;

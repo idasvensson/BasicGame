@@ -13,6 +13,8 @@
 
 namespace basicgame {
     
+    Image::Image(){}
+    
     Image::Image(std::string filename, bool transparent) : isTransparent(transparent)
     {
         // Temporära ytor
@@ -38,6 +40,11 @@ namespace basicgame {
                 // Color key surface
                 SDL_SetColorKey( optimizedImage, SDL_SRCCOLORKEY, SDL_MapRGB( optimizedImage->format, 0, 0xFF, 0xFF ) );
             }
+            
+            // Addera transparens till bildens vita pixlar
+            Uint32 white = SDL_MapRGB(optimizedImage->format, 255, 255, 255);
+            Uint32 pixel = pixel = *((Uint32*)optimizedImage->pixels);
+            SDL_SetColorKey(optimizedImage, SDL_SRCCOLORKEY|SDL_RLEACCEL, white);
         }
         // Om inte angiven fil finns
         else

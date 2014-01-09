@@ -7,24 +7,59 @@
 //
 
 #include "Sprite.h"
+using namespace std;
 
 namespace basicgame {
     
-    Sprite::Sprite(int x, int y){
+    Sprite::Sprite(int x, int y, int xVel, int yVel, string filename, bool transparent) : image(filename, transparent)
+    {
+        
     }
     
-    Rectangle Sprite::getRect() {
+    Rectangle Sprite::getRect()
+    {
         return rect;
     }
     
-    Sprite::~Sprite(){
+    Sprite::~Sprite()
+    {
     }
     
-    void Sprite::keyDown(int key) {
+    void Sprite::keyDown(int key)
+    {
     }
     
-    void Sprite::tick(std::vector<Sprite*> sprites) {
-        
+    void Sprite::keyUp(int key)
+    {
+    }
+    
+    void Sprite::tick(std::vector<Sprite*> sprites)
+    {
+    }
+    
+    void Sprite::setXVel(int newVel)
+	{
+		xVel = newVel;
+	}
+    
+	void Sprite::setYVel(int newVel)
+	{
+		yVel = newVel;
+	}
+    
+	int Sprite::getXVel()
+	{
+		return xVel;
+	}
+    
+	int Sprite::getYVel()
+	{
+		return yVel;
+	}
+    
+    void Sprite::setImage(string filename, bool transparent)
+    {
+        //img
     }
     /*
     void Sprite::setPosition(int x, int y) {

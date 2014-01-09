@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 Ida Svensson. All rights reserved.
 //
 
-#include "stdafx.h"
+// #include "stdafx.h"
 #include "GameEngine.h"
 #include "SDL/SDL.h"
 #include "Globals.h"
@@ -31,15 +31,16 @@ namespace basicgame {
             sprites[i]->draw();
         SDL_Flip(sys.screen);
         
-        // SDL_EnableKeyRepeat(1, SDL_DEFAULT_REPEAT_INTERVAL);
+        SDL_EnableKeyRepeat(1, 200);
         
         // Händelseloop
         bool quit = false;
-        SDL_Event event;
         while(!quit) {
             
             // Starta timern
 			timer.start();
+            
+            SDL_Event event;
             
             while (SDL_PollEvent(&event)) {
                 

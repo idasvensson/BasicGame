@@ -12,25 +12,26 @@
 #include "SDL/SDL.h"
 #include "Sprite.h"
 #include <vector>
+#include <string>
 
 namespace basicgame {
 
     class PlayerSprite : public Sprite {
     
     public:
-        static PlayerSprite* getInstance(int x, int y);
+        static PlayerSprite* getInstance(int x, int y, int xVel, int yVel, std::string filename, bool transparent = true);
         void draw();
         void keyDown(int key);
+        void keyUp(int key);
         ~PlayerSprite();
-        int x, y;
+        int x, y; // rect?
         virtual void tick(std::vector<Sprite*> sprites);
     protected:
-        PlayerSprite(int x, int y);
+        PlayerSprite(int x, int y, int xVel, int yVel, std::string filename, bool transparent);
     private:
-        SDL_Surface* img;
-        SDL_Surface* rightImg;
-        SDL_Surface* leftImg;
-        // bool isMoving;
+        //SDL_Surface* img;
+        //SDL_Surface* rightImg;
+        //SDL_Surface* leftImg;
         
     };
 

@@ -11,6 +11,8 @@
 
 #include "Rectangle.h"
 #include <vector>
+#include "Image.h"
+#include <string>
 
 namespace basicgame {
 
@@ -22,18 +24,26 @@ namespace basicgame {
         Rectangle getRect();
         virtual ~Sprite();
         virtual void keyDown(int key);
-        // virutal void getSpeed();
-        // virtual void getPosition();
-        // virtual void setSpeed();
+        virtual void keyUp(int key);
+        // virutal int getSpeed();
+        // virtual int getPosition();
+        // virtual void setSpeed(int xVel, int yVel);
         // virtual void setPosition(int x, int y);
+        virtual void setImage(std::string filename, bool transparent);
     protected:
-        Sprite(int x, int y);
+        Sprite(int x, int y, int xVel, int yVel, std::string filename, bool transparent);
         Rectangle rect;
+        Image image;
+        void setXVel(int newVel);
+        void setYVel(int newVel);
+        int getXVel();
+        int getYVel();
     private:
+        int x, y;
+        int xVel;
+        int yVel;
         Sprite(const Sprite&); // Förbjud tilldelningar med copy-konstruktorn
         const Sprite& operator=(const Sprite&); // Förbjud automatisk tilldening med tilldelningsoperator
-        // int speed;
-        // iny position;
     };
 
 } // namespace basicgame

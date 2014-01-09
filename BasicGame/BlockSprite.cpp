@@ -15,28 +15,23 @@ using namespace std;
 
 namespace basicgame{
     
-    BlockSprite::BlockSprite(int x, int y) :
-    Sprite(x, y)
+    BlockSprite::BlockSprite(int x, int y, int xVel, int yVel, string filename, bool transparent) :
+    Sprite(x, y, 0, 0, filename, transparent)
     {
         rect.x = x;
         rect.y = y;
-        img = SDL_LoadBMP("/Users/idasvensson/Desktop/images/boll.bmp");
-        
-        // Addrea transparens till bildens vita pixlar
-        Uint32 white = SDL_MapRGB(img->format, 255, 255, 255);
-        Uint32 pixel = pixel = *((Uint32*)img->pixels);
-        SDL_SetColorKey(img, SDL_SRCCOLORKEY|SDL_RLEACCEL, white);
+        // img = SDL_LoadBMP("/Users/idasvensson/Desktop/images/boll.bmp");
     }
     
-    BlockSprite* BlockSprite::getInstance(int x, int y)
+    BlockSprite* BlockSprite::getInstance(int x, int y, int xVel, int yVel, string filename, bool transparent)
     {
-        return new BlockSprite(x, y);
+        return new BlockSprite(x, y, xVel, yVel, filename, transparent);
     }
     
     void BlockSprite::draw()
     {
         // Rita ut bilden på skärmytan
-        SDL_BlitSurface(img, NULL, sys.screen, &rect);
+        // SDL_BlitSurface(img, NULL, sys.screen, &rect);
     }
     
     void BlockSprite::animationStart()
@@ -58,7 +53,7 @@ namespace basicgame{
     }
     
     BlockSprite::~BlockSprite() {
-		SDL_FreeSurface(img);
+		//SDL_FreeSurface(img);
 	}
     
 }

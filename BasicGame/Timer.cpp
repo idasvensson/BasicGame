@@ -1,6 +1,6 @@
-#include "stdafx.h"
+// #include "stdafx.h"
 #include "Timer.h"
-#include "SDL.h"
+#include "SDL/SDL.h"
 
 namespace basicgame
 {

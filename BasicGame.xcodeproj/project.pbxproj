@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0C1FF8DF187C1298006E62DC /* stdafx.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C1FF8DA187C1298006E62DC /* stdafx.cpp */; };
+		0C10CE83187EC7C600A506C3 /* MovingSprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C10CE81187EC7C600A506C3 /* MovingSprite.cpp */; };
 		0C1FF8E0187C1298006E62DC /* Timer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C1FF8DD187C1298006E62DC /* Timer.cpp */; };
 		0CC13F1F185F42B900E49E35 /* GameEngine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0CC13F1D185F42B900E49E35 /* GameEngine.cpp */; };
 		0CC13F22185F4C4500E49E35 /* BlockSprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0CC13F20185F4C4500E49E35 /* BlockSprite.cpp */; };
@@ -40,9 +40,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		0C1FF8DA187C1298006E62DC /* stdafx.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = stdafx.cpp; sourceTree = "<group>"; };
-		0C1FF8DB187C1298006E62DC /* stdafx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stdafx.h; sourceTree = "<group>"; };
-		0C1FF8DC187C1298006E62DC /* targetver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = targetver.h; sourceTree = "<group>"; };
+		0C10CE81187EC7C600A506C3 /* MovingSprite.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MovingSprite.cpp; sourceTree = "<group>"; };
+		0C10CE82187EC7C600A506C3 /* MovingSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovingSprite.h; sourceTree = "<group>"; };
 		0C1FF8DD187C1298006E62DC /* Timer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Timer.cpp; sourceTree = "<group>"; };
 		0C1FF8DE187C1298006E62DC /* Timer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Timer.h; sourceTree = "<group>"; };
 		0CC13F1D185F42B900E49E35 /* GameEngine.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameEngine.cpp; sourceTree = "<group>"; };
@@ -117,15 +116,14 @@
 				0CC13F5E1862353400E49E35 /* Image.h */,
 				0CD85CC0185121EC0090A668 /* Sprite.cpp */,
 				0CD85CC1185121EC0090A668 /* Sprite.h */,
+				0C10CE81187EC7C600A506C3 /* MovingSprite.cpp */,
+				0C10CE82187EC7C600A506C3 /* MovingSprite.h */,
 				0CD85CC9185138C60090A668 /* Rectangle.cpp */,
 				0CD85CCA185138C60090A668 /* Rectangle.h */,
 				0CD85CC3185123750090A668 /* PlayerSprite.cpp */,
-				0C1FF8DA187C1298006E62DC /* stdafx.cpp */,
-				0C1FF8DB187C1298006E62DC /* stdafx.h */,
-				0C1FF8DC187C1298006E62DC /* targetver.h */,
+				0CD85CC4185123750090A668 /* PlayerSprite.h */,
 				0C1FF8DD187C1298006E62DC /* Timer.cpp */,
 				0C1FF8DE187C1298006E62DC /* Timer.h */,
-				0CD85CC4185123750090A668 /* PlayerSprite.h */,
 				0CC13F20185F4C4500E49E35 /* BlockSprite.cpp */,
 				0CC13F21185F4C4500E49E35 /* BlockSprite.h */,
 				0CD85CC61851322F0090A668 /* Frame.cpp */,
@@ -198,8 +196,8 @@
 				0CD85CC81851322F0090A668 /* Frame.cpp in Sources */,
 				0CD85CAA18511DA20090A668 /* main.cpp in Sources */,
 				0CD85CCB185138C60090A668 /* Rectangle.cpp in Sources */,
+				0C10CE83187EC7C600A506C3 /* MovingSprite.cpp in Sources */,
 				0CD85CC5185123750090A668 /* PlayerSprite.cpp in Sources */,
-				0C1FF8DF187C1298006E62DC /* stdafx.cpp in Sources */,
 				0CC13F1F185F42B900E49E35 /* GameEngine.cpp in Sources */,
 				0CC13F5F1862353400E49E35 /* Image.cpp in Sources */,
 			);
